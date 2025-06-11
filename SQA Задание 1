@@ -1,0 +1,21 @@
+ ЗАДАНИЕ 1
+SELECT species_name
+FROM species
+ORDER BY species_id
+LIMIT 1;
+ МАЛЫШ
+
+SELECT species_name
+FROM species
+WHERE species_amount > 1800;
+ РОЗА
+
+SELECT species_name
+FROM species
+WHERE species_name LIKE 'п%' AND type_id = 5;
+ ПОДСОЛНУХ
+
+SELECT species_name
+FROM species
+WHERE species_name LIKE '%са' OR species_amount = 5;
+ ЛИСА
