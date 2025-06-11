@@ -1,0 +1,30 @@
+Задание 1
+SELECT species_name
+FROM species
+WHERE to_char(date_start,'YYYY') = '2023';
+ ОБЕЗЬЯНА
+
+
+Задание 2 
+SELECT s.species_name
+FROM species AS s 
+JOIN species_in_places AS sip
+ON s.species_id = sip.species_id
+WHERE s.species_status = 'absent' AND sip.place_id = 3;
+ ЯБЛОКО
+
+Задание 3
+SELECT s.species_name, s.species_amount
+FROM species AS s 
+JOIN species_in_places AS sip 
+ON s.species_id = sip.species_id
+JOIN places AS p 
+ON p.place_id = sip.place_id
+WHERE p.place_name = 'дом' AND to_char(s.date_start, 'MM') = '05';
+ СОБАКА
+
+Задание 4
+SELECT species_name
+FROM species
+WHERE species_name LIKE '% %';
+ ГОЛУБАЯ РЫБА
